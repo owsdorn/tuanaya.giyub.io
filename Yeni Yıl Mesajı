@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kırmızı ve Sarı Geçişli Site</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #A00000, #a02e5c);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .player-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        iframe {
+            border: none;
+            border-radius: 10px;
+        }
+        .message-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+            height: 200px;
+            overflow-y: auto;
+        }
+        .message-container h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .message-container p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        .message-container::-webkit-scrollbar {
+            width: 10px;
+        }
+        .message-container::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+        }
+        .message-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <h1>Hoş Geldiniz!</h1>
+    <div class="player-container">
+        <iframe src="https://open.spotify.com/playlist/3NN4iT1l7XJxlknUUOjEfs?si=c1d2400cd1c146cd" width="300" height="380" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+    <div class="message-container">
+        <h2>Mesaj</h2>
+        <p>Bir yıl daha geride kalırken, içimdeki sevgi, özlem ve hasretin hiç azalmadığının farkındayım. Yılın bu son gününde, seninle geçirdiğimiz anıları, her zaman olduğu gibi, bir kez daha hatırlamak; içinde yaşadığım duyguları daha da yüzüme vuruyor. Seninle birlikte olmayan her an, tıpkı bir camın kırılması gibi içimi paramparça ediyor.
+Seninle kurduğum tüm hayalleri ve paylaştığımız zamanları hatırlatıyor. Seninle yaşadığımız o değerli anılar, bugün de kalbimde hala değişmeyen özel bir yere sahipler. Ne kadar uzağında olsam da, içimdeki burukluk, yarım kalmışlık ve özlemle seni sevmekten asla vazgeçmedim. verdiğin bileklik ise bileğimden henüz hiç çıkmadı ve çıkmayacakta.
+
+Seninle yaşadığımız her anı düşünmek, kalbimde tarifsiz duygulara yer bırakıyor. Seni her zaman özleyeceğimi ve seni ne kadar çok sevdiğimi asla unutma. Bu yeni yıl, sana mutluluk, sağlık ve huzur getirsin. hayallerine ulaştığın ve ulaşmaya çok yakın olduğun anlarda yanında olamayacağımın verdiği hissi sana tarif edemem. gözlerindeki ışıltının gitmesine; o masumane çocuksu ruhunu ve saf kalbini kimsenin kırmasına ve zarar vermesine müsade etme. Yeni yılın kutlu olsun Kızıl Kafa.</p>
+    </div>
+    <script>
+        // Sayfa yüklendiğinde otomatik çalma
+        const iframe = document.querySelector('iframe');
+        const src = iframe.getAttribute('src');
+        iframe.setAttribute('src', `${src}?autoplay=1`);
+    </script>
+</body>
+</html>
